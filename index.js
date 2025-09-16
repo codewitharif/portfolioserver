@@ -56,6 +56,11 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
+//health check api
+app.get("/", async (req, res) => {
+  return res.json("portfolio server is running...");
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
